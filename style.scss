@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f00;
+    padding: 1rem;
+    color: #fff;
+
+    .logo {
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        gap: 1rem;
+
+        button {
+            background: #f44336;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background: #c62828;
+            }
+        }
+    }
+}
+
+.destaque {
+    .imagem-banner {
+        background: #ccc;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .texto-banner {
+            background: #fff;
+            padding: 1rem 2rem;
+            border: 2px solid #2196f3;
+        }
+    }
+}
+
+.requisitos {
+    padding: 2rem;
+    text-align: center;
+
+    .cartoes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .cartao {
+            background: #e53935;
+            color: #fff;
+            padding: 2rem 1rem;
+            border-radius: 8px;
+        }
+    }
+}
+
+.agendamento {
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+
+    .conteudo-agendamento {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .texto-agendamento {
+            background: #eee;
+            padding: 1rem;
+            width: 40%;
+        }
+
+        .imagem-agendamento {
+            background: #ccc;
+            width: 40%;
+            height: 150px;
+        }
+    }
+
+    .botao-agendar {
+        background: #d32f2f;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background: #b71c1c;
+        }
+    }
+}
+
+.faq {
+    text-align: center;
+    margin: 2rem 0;
+
+    .botao-faq {
+        background: #e53935;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.rodape {
+    background: #f44336;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .contatos {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .telefone,
+        .email {
+            background: #2196f3;
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+        }
+    }
+}
