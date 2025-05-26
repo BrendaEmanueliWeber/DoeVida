@@ -5,137 +5,106 @@ body {
   font-size: 18px;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 .cabecalho {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: #f00;
-  padding: 1.2rem 4rem;
+  background: #C90000;
+  padding: 1.2rem 10rem;
   color: #fff;
 }
 .cabecalho .logo {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 .cabecalho .menu {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 .cabecalho .menu button {
-  background: #f44336;
+  background: #C90000;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  font-size: 1rem;
 }
 .cabecalho .menu button:hover {
-  background: #c62828;
+  background: #ff6b6b;
 }
 
-.destaque .imagem-banner {
-  padding: 1.2rem 18rem;
-  background: #ccc;
-  height: 300px;
+.content {
   display: flex;
+  background-image: url(images/bg-img.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 25rem;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
-.destaque .imagem-banner .texto-banner {
-  padding: 1rem 3.5rem;
+.content .texto {
+  color: #ffffff;
+  font-size: 1.5rem;
   text-align: center;
-  background: #fff;
-}
-.destaque .imagem-banner .texto-banner p {
-  color: #5a5353;
+  padding: 1rem;
 }
 
 .requisitos {
-  padding: 1.2rem 4rem;
-  text-align: center;
+  padding: 2rem;
 }
 .requisitos .cartoes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-  gap: 4rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
-.requisitos .cartoes .cartao {
-  background: #e53935;
+.requisitos .cartao {
+  background-color: #C90000;
   color: #fff;
-  padding: 2rem 1rem;
   border-radius: 10px;
-  height: 12vw;
-}
-.requisitos .cartoes .cartao p {
-  padding: 1.2rem 2rem;
-}
-
-.agendamento {
-  padding: 1.2rem 4rem;
-  background: #fff;
-  text-align: center;
-}
-.agendamento .conteudo-agendamento {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-.agendamento .conteudo-agendamento .texto-agendamento {
-  background: #eee;
   padding: 1rem;
-  width: 40%;
-}
-.agendamento .conteudo-agendamento .imagem-agendamento {
-  background: #ccc;
-  width: 40%;
-  height: 150px;
-}
-.agendamento .botao-agendar {
-  background: #d32f2f;
-  color: #fff;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.agendamento .botao-agendar:hover {
-  background: #b71c1c;
-}
-
-.faq {
   text-align: center;
-  margin: 2rem 0;
-  padding: 1.2rem 4rem;
-}
-.faq .botao-faq {
-  background: #e53935;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
   font-weight: bold;
-  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.requisitos .cartao:hover {
+  transform: translateY(-5px);
 }
 
-.rodape {
-  background: #f44336;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 4rem;
+@media (max-width: 1024px) {
+  .cabecalho {
+    padding: 1rem 4rem;
+  }
+  .cabecalho .menu {
+    gap: 1.5rem;
+  }
+  .requisitos .cartoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.rodape .contatos {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.rodape .contatos .telefone,
-.rodape .contatos .email {
-  background: #2196f3;
-  color: #fff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+  .cabecalho .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .cabecalho .menu button {
+    width: 100%;
+    text-align: left;
+  }
+  .requisitos .cartoes {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
