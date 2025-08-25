@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.ponto {
+  display: flex;
+  position: relative;
+  align-items: baseline;
+  gap: 1rem;
+  padding-top: 6.5vw;
+  padding-left: 6rem;
+}
+.ponto img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.ponto h2 {
+  font-size: 1.5rem;
+}
+
+#cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  color: #ffffff;
+  background-color: #a80c11;
+}
+#cabecalho .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#cabecalho .menu {
+  display: flex;
+  gap: 2rem;
+}
+#cabecalho .menu button {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+#cabecalho .menu button a {
+  color: white;
+  text-decoration: none;
+}
+#cabecalho .menu button:hover {
+  color: #bd2d2d;
+  text-decoration: none;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 3rem auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-top: 0rem;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: justify;
+}
+.faq .faq-item {
+  border: 1px solid #c9c9c9;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq .faq-item .faq-question {
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  background: #f9f9f9;
+}
+.faq .faq-item .faq-text {
+  position: relative;
+  padding-left: 1rem;
+}
+.faq .faq-item .faq-text::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 3.6rem;
+  background-color: hsl(0, 62%, 46%);
+  border-radius: 4px 0px 0px 4px;
+}
+.faq .faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  color: #333;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  border: 1px solid #f9f9f9;
+  border-top: 2px solid #f9f9f9;
+  border-radius: 0 0 5px 5px;
+}
+.faq .faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 1rem;
+}
+.faq .faq-item .arrow {
+  transition: transform 0.3s ease;
+  color: #a80c11;
+}
+.faq .faq-item.active .arrow {
+  transform: rotate(90deg);
+}
+
+#rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  padding-bottom: 0.8rem;
+  background-color: #a80c11;
+  color: #fff;
+  text-align: start;
+}
+#rodape .conteudo-rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem;
+  margin-bottom: 1.5rem;
+}
+#rodape .coluna-logo,
+#rodape .coluna-sobre,
+#rodape .coluna-contato {
+  max-width: 28vw;
+}
+#rodape .coluna-logo {
+  display: flex;
+  align-items: start;
+}
+#rodape .coluna-logo .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+#rodape .coluna-logo .logo img {
+  width: 50px;
+  height: auto;
+}
+#rodape .coluna-logo .logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+#rodape .coluna-sobre {
+  text-align: justify;
+}
+#rodape .coluna-sobre h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+#rodape .coluna-sobre p {
+  font-size: 1rem;
+  text-align: justify;
+}
+#rodape .coluna-contato h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+#rodape .coluna-contato .contato-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.4rem 0;
+}
+#rodape .coluna-contato .contato-item .icone img {
+  width: 20px;
+  height: auto;
+}
+#rodape .coluna-contato .contato-item span {
+  font-size: 1rem;
+}
+#rodape .divisao {
+  width: 75%;
+  height: 0.5px;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+#rodape .text-center {
+  font-size: 0.85rem;
+}/*# sourceMappingURL=stylefaq.css.map */
